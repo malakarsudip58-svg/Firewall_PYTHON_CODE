@@ -1,5 +1,8 @@
+#!/usr/bin/env python3
 
-
+#  No Raw() layer → ICMP reject broken
+# No interface validation
+# Infinite stats loop (no self.running check)
 from scapy.all import (sniff, send, conf, IP, TCP, UDP, ICMP)
 
 
